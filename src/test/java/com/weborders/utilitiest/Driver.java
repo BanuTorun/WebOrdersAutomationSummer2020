@@ -22,7 +22,7 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            String browser="chrome";
+            String browser=ConfigurationReader.getProperty("browse");
             switch(browser){
                 case"chrome":
                     WebDriverManager.chromedriver().setup();
